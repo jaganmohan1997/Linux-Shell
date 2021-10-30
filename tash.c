@@ -1,25 +1,17 @@
 /*
 Program Name : tash.c
-Authors: 'Akshay Kumar Jha(AKJ200008)'  and  'Jagan Mohan Reddy Bijjam (JXM210003)'
+Authors: Jagan Mohan Reddy Bijjam
 Created On: 09/18/2021
-Last Modified On: 09/25/2021
 Description : This program implements a basic shell named tash, which can run both in interactive mode & batch mode.
-			  It also has features of redirection and Parallel Processes creation. It supports the cd, exit, and path built in
-			  commands.
-
-			  NOTE1: We have modified the '<path to P1>' string to '/cs5348-xv6/src/jxm210003/P1/' so that
-			  		 all the test cases in xtratestcases run smoothly
-			  NOTE2: Also, a new myls object file has been created based on modified myls.c file. This is as per
-			  		 the instructions of the professor, because myls object file was not working properly unlike
-			  		 myhello object file.
+	      It also has features of redirection and Parallel Processes creation. It supports the cd, exit, and path built in commands.
 Functions:
 	1) print_error: Prints the one and only error message
 	2) promptTash: Prints tash> to the console which signifies interactive mode
-	3) readInput:  - Uses getline to read the input both in interactive mode and batch mode. 
-				   - It removes new line character from every getline command
-				   - It converts tabs to spaces. Spaces will be handled by strtok in extractParams.
-				   - If only spaces or tabs are present in the input line, then it skips and asks for new commands
-				   - It prints error if each `&` character is not preceeded by a command
+	3) readInput:   - Uses getline to read the input both in interactive mode and batch mode. 
+			- It removes new line character from every getline command
+			- It converts tabs to spaces. Spaces will be handled by strtok in extractParams.
+			- If only spaces or tabs are present in the input line, then it skips and asks for new commands
+			- It prints error if each `&` character is not preceeded by a command
 	4) extractParams: Using the delimiter argument, it bifurcates the command into an array of words and stores it
 					  into the char* param argument. When space is passed as delimiter, additional spaces are
 					  handled by strtok
